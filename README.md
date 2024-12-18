@@ -1,1 +1,1 @@
-<center><h1>XzyyMDS</h1></center>
+<h1 align="center">XzyyMDS</h1>
