@@ -3101,24 +3101,6 @@ router.get('/other/kbbi', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://kbbi-api-zhirrr.vercel.app/api/kbbi?text=${text}`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-                 result
-             })
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-	 })
-		router.get('/other/openai', async (req, res, next) => {
-          var apikey = req.query.apikey
-       	var text = req.query.kata
-       	if(!apikey) return res.json(loghandler.apikey)
-       if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
-        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://btch.us.kg/openai?text=${text}`))
         .then(response => response.json())
         .then(data => {
